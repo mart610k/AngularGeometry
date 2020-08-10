@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Triangle } from "../triangle";
+import { Triangle } from "../shapes/triangle";
 
 @Component({
   selector: 'app-test-com',
