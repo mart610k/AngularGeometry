@@ -1,9 +1,8 @@
-export class Triangle {
-    _base : number;
-    _height : number;
-    constructor (base : number, height :number){
-        this._base = base;
-        this._height = height;
+import {Shape} from "./shape";
+
+export class Triangle extends Shape {
+    constructor (base : number, height :number) { 
+        super(base,height);
     }
 
     calcuateArea() : number {
