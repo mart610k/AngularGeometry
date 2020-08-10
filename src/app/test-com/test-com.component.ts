@@ -9,9 +9,10 @@ import { createLoweredSymbol } from '@angular/compiler';
   styleUrls: ['./test-com.component.css']
 })
 export class TestComComponent implements OnInit {
-  lenghID : number;
+  lengthID : number;
   heightID : number;
   calculatedArea : number = 0 ;
+  calculatedCircumference : number = 0;
 
   
   constructor() { 
@@ -19,25 +20,25 @@ export class TestComComponent implements OnInit {
     console.log(triable.calcuateArea());
   }
   
-  doSomething() : void{
+  doSomething(): void{
     console.log("---------------------------------------------");
-    console.log(this.lenghID);
+    console.log(this.lengthID);
     console.log(this.heightID);
-    let square = new Square(this.lenghID,this.heightID);
+    let square = new Square(this.lengthID,this.heightID);
     this.calculatedArea = square.calcuateArea();
     console.log(square.calcuateArea());
+    this.calculatedCircumference = square.calculateCircumference()
+    
   }
   //TODO: Find out how to actually set up an event to save it for real.
   //(its currently only through a switch case)... 
   change(event) {
-    // console.log(event.target.value);
-    // console.log(event.target.id);
     switch(event.target.id){
       case "HeightID":
         this.heightID = event.target.value;
         break;
      case"LengthID":
-        this.lenghID = event.target.value
+        this.lengthID = event.target.value
         break;
     }
 

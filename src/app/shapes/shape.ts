@@ -9,4 +9,8 @@ export abstract class Shape {
     calcuateArea() : number {
         return this._base * this._height;
     }
+
+    calculateCircumference() : number {
+        return this._base * 2 + this._height * 2;
+    }
 }
