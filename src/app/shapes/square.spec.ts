@@ -2,6 +2,6 @@ import { Square } from './square';
 
 describe('Square', () => {
   it('should create an instance', () => {
-    expect(new Square(2,2)).toBeTruthy();
+    expect(new Square(2)).toBeTruthy();
   });
 });

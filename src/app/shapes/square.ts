@@ -2,9 +2,9 @@ import { Shape } from "./shape";
 
 export class Square extends Shape {
 
-    constructor (base : number, height :number) { 
+    constructor (base : number) { 
 
-        super(base,height);
+        super(base,base);
     }
     
 }
