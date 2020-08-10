@@ -1,8 +1,14 @@
 <p>test-com works!</p>
-
-<input (change)="change($event)" type="number" name="heightID" id="HeightID">
-<input (change)="change($event)" type="number" name="lengthID" id="LengthID">
-<button (click)="doSomething()">Hello</button>
+<p>Height of your shape:</p>
+<input (change)="change($event)" type="number" name="heightID" id="HeightID"><br>
+<p>Lenght of your shape:</p>
+<input (change)="change($event)" type="number" name="lengthID" id="LengthID"><br>
+<p>which shape is it:</p>
+<input (change)="shapeChangeEvent($event)" checked=true type="radio" id="square" name="shape" value="square">
+<label for="square">Square</label><br>
+<input (change)="shapeChangeEvent($event)" type="radio" id="rectangle" name="shape" value="rectangle">
+<label for="rectangle">Rectangle</label><br>
+<button (click)="doSomething()">Get circumference and area of the shape</button>
 
 
 <p>the area of your shape is {{calculatedArea}}</p>

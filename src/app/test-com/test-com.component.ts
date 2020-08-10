@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Triangle } from "../shapes/triangle";
+
 import { Square } from "../shapes/square";
+import { Rectangle } from "../shapes/rectangle"
 import { createLoweredSymbol } from '@angular/compiler';
 
 @Component({
@@ -13,11 +14,10 @@ export class TestComComponent implements OnInit {
   heightID : number;
   calculatedArea : number = 0 ;
   calculatedCircumference : number = 0;
-
+  shape : shapes = shapes.square;
   
   constructor() { 
-    let triable = new Triangle(2,5);
-    console.log(triable.calcuateArea());
+    this.shape = shapes.square;
   }
   
   doSomething(): void{
@@ -43,8 +43,16 @@ export class TestComComponent implements OnInit {
     }
 
   }
+
+  shapeChangeEvent(event){
+    this.shape = event.target.value;
+  }
   
   ngOnInit(): void {
   }
   
+}
+enum shapes{
+  rectangle,
+  square
 }
